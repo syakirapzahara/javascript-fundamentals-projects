@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Daily Expense Log</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Daily Expense Log</h1>
+
+      <p class="budget-text">
+        Budget hari ini: Rp100.000 <span id="tanggal"></span>
+      </p>
+
+      <div class="input-area">
+        <input
+          type="text"
+          id="ket"
+          placeholder="Apa yg dibeli hari ini? (ex: kopi)"
+        />
+        <input
+          type="number"
+          id="harga"
+          placeholder="Berapa harganya? (ex: 15000)"
+        />
+        <button id="catat-btn" onclick="catat()">Catat Expense</button>
+      </div>
+
+      <div class="hasil">
+        <p>Total spent: <b id="total">Rp0</b></p>
+        <p>Remaining: <b id="sisa">Rp100.000</b></p>
+        <p class="kecil">Transactions today: <b id="jumlah">0</b></p>
+      </div>
+
+      <h3>History:</h3>
+      <p id="daftar"></p>
+
+      <button id="reset-btn" onclick="resetHari()">
+        Reset Catatan Hari ini
+      </button>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
