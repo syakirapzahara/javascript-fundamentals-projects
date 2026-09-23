@@ -1,0 +1,177 @@
+body {
+  margin: 0;
+  padding: 30px 20px;
+  background: #1e2a4a;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  min-height: 100vh;
+}
+
+.top-bar {
+  text-align: right;
+  margin-bottom: 20px;
+}
+
+#new-game-btn {
+  background: #ef4b6a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#new-game-btn:hover {
+  background: #c93a55;
+}
+
+.period {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.period span {
+  margin: 0 6px;
+}
+
+#period-el {
+  font-weight: bold;
+  color: #ef4b6a;
+  font-size: 22px;
+}
+
+.period button {
+  background: transparent;
+  color: #a8b8dc;
+  border: 2px solid #a8b8dc;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.period button:hover:not(:disabled) {
+  background: #a8b8dc;
+  color: #1e2a4a;
+}
+
+.period button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.winner {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #ef4b6a;
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  gap: 60px;
+  justify-content: center;
+}
+
+.team {
+  text-align: center;
+  padding: 15px;
+  border-radius: 12px;
+  transition: background 0.3s;
+}
+
+.team.leader {
+  background: rgba(239, 75, 106, 0.15);
+  box-shadow: 0 0 20px rgba(239, 75, 106, 0.4);
+}
+
+.team.out {
+  background: rgba(120, 120, 120, 0.2);
+  opacity: 0.6;
+}
+
+.team-name {
+  font-size: 40px;
+  letter-spacing: 4px;
+  margin: 0 0 20px 0;
+}
+
+.score {
+  background: #000;
+  color: #ef4b6a;
+  font-family: "Courier New", monospace;
+  font-size: 100px;
+  font-weight: bold;
+  width: 180px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin: 0 auto 20px auto;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.buttons button {
+  background: transparent;
+  color: #a8b8dc;
+  border: 2px solid #a8b8dc;
+  padding: 10px 16px;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.buttons button:hover:not(:disabled) {
+  background: #a8b8dc;
+  color: #1e2a4a;
+}
+
+.buttons button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.fouls-label {
+  margin: 10px 0 5px 0;
+  font-size: 14px;
+  color: #a8b8dc;
+  letter-spacing: 2px;
+}
+
+.fouls {
+  font-size: 32px;
+  font-weight: bold;
+  color: #ef4b6a;
+  margin-bottom: 5px;
+}
+
+.fouls.warning {
+  color: orange;
+}
+
+.fouls.danger {
+  color: red;
+}
+
+.foul-status {
+  font-size: 12px;
+  font-weight: bold;
+  color: red;
+  letter-spacing: 1px;
+  margin: 0 0 10px 0;
+  min-height: 16px;
+}

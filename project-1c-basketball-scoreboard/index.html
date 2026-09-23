@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Scoreboard</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div class="top-bar">
+      <button id="new-game-btn" onclick="newGame()">New Game</button>
+    </div>
+
+    <div class="period">
+      <span>Period:</span>
+      <span id="period-el">1</span>
+      <span>/ 4</span>
+      <button id="next-period-btn" onclick="nextPeriod()">Next Period</button>
+    </div>
+
+    <div id="winner" class="winner"></div>
+
+    <div class="container">
+      <div class="team" id="home-team">
+        <h2 class="team-name">HOME</h2>
+        <div class="score" id="home-score">0</div>
+        <div class="buttons">
+          <button id="home-btn-1" onclick="addHome(1)">+1</button>
+          <button id="home-btn-2" onclick="addHome(2)">+2</button>
+          <button id="home-btn-3" onclick="addHome(3)">+3</button>
+        </div>
+
+        <p class="fouls-label">Fouls</p>
+        <div class="fouls" id="home-fouls">0</div>
+        <p class="foul-status" id="home-status"></p>
+        <div class="buttons">
+          <button id="home-foul-btn" onclick="addFoulHome()">+ Foul</button>
+        </div>
+      </div>
+
+      <div class="team" id="guest-team">
+        <h2 class="team-name">GUEST</h2>
+        <div class="score" id="guest-score">0</div>
+        <div class="buttons">
+          <button id="guest-btn-1" onclick="addGuest(1)">+1</button>
+          <button id="guest-btn-2" onclick="addGuest(2)">+2</button>
+          <button id="guest-btn-3" onclick="addGuest(3)">+3</button>
+        </div>
+
+        <p class="fouls-label">Fouls</p>
+        <div class="fouls" id="guest-fouls">0</div>
+        <p class="foul-status" id="guest-status"></p>
+        <div class="buttons">
+          <button id="guest-foul-btn" onclick="addFoulGuest()">+ Foul</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
