@@ -1,0 +1,181 @@
+/* ===== RESET ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== BODY ===== */
+body {
+  min-height: 100vh;
+  background: #1f2937;
+  font-family:
+    "Inter",
+    -apple-system,
+    sans-serif;
+  color: white;
+  padding: 80px 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== HEADING ===== */
+h1 {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+
+h1 span {
+  color: #10b981;
+}
+
+h3 {
+  color: #9ca3af;
+  font-weight: 400;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+/* ===== CONTROLS ===== */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.controls label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #d1d5db;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.controls input[type="number"] {
+  width: 70px;
+  padding: 6px 10px;
+  border: 1px solid #374151;
+  background: #374151;
+  color: white;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+}
+
+.controls input[type="number"]:focus {
+  border-color: #10b981;
+}
+
+.controls input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: #10b981;
+  cursor: pointer;
+}
+
+/* ===== BUTTON ===== */
+#generate-btn {
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 40px;
+  transition:
+    background 0.2s,
+    transform 0.1s;
+  align-self: flex-start;
+}
+
+#generate-btn:hover {
+  background: #059669;
+}
+
+#generate-btn:active {
+  transform: scale(0.98);
+}
+
+/* ===== PASSWORDS ===== */
+.passwords {
+  display: flex;
+  gap: 20px;
+  border-top: 1px solid #374151;
+  padding-top: 30px;
+  flex-wrap: wrap;
+}
+
+.password {
+  background: #374151;
+  padding: 14px 20px;
+  border-radius: 8px;
+  color: #10b981;
+  font-family: "Courier New", monospace;
+  font-size: 15px;
+  font-weight: bolder;
+  flex: 1;
+  min-width: 200px;
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    color 0.2s;
+  user-select: none;
+  word-break: break-all;
+}
+
+.password:hover {
+  background: #4b5563;
+  color: #34d399;
+}
+
+.password:active {
+  background: #10b981;
+  color: white;
+}
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(100px);
+  background: #10b981;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  opacity: 0;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
+  pointer-events: none;
+}
+
+.toast.show {
+  transform: translateX(-50%) translateY(0);
+  opacity: 1;
+}
+
+@media (max-width: 640px) {
+  body {
+    padding: 40px 20px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .passwords {
+    flex-direction: column;
+  }
+}
